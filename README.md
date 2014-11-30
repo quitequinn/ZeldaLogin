@@ -3,7 +3,7 @@ ZeldaLogin
 
 Play Zelda's secret door sound when you open a new Terminal window
 
-
+#####
                           .--¯¯¯¯--.
                       .''          '.
                      /  _--_   _--_  \
@@ -25,3 +25,4 @@ Play Zelda's secret door sound when you open a new Terminal window
                    /        \  /        \
                   /__________\/__________\
                   \__________/\__________/
+#####
