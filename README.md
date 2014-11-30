@@ -3,15 +3,7 @@ ZeldaLogin
 
 Play Zelda's secret door sound when you open a new Terminal window
 
-Just place the mp3 in your home directory, or clone the whole thing into it
-
-```
-cd
-git clone git@github.com:qkeave/ZeldaLogin.git .
-
-```
-
-
+Just place the mp3 in your home/user directory and add the .bash_profile.
 Incase you already have stuff in your .bash_profile, just add 
 
 ```
