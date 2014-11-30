@@ -3,6 +3,13 @@ ZeldaLogin
 
 Play Zelda's secret door sound when you open a new Terminal window
 
+Just place the mp3 in your home directory
+
+```
+cd
+git clone git@github:qkeave/ZeldaLogin.git .
+
+
 ```
 
                           .--¯¯¯¯--.
