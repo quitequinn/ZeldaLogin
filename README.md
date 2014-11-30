@@ -9,7 +9,8 @@ Incase you already have stuff in your .bash_profile, just add
 ```
 Afplay zelda-secret.mp3
 ```
-
+This is the soundBite
+http://quinnkeaveney.com/files/zelda-secret.mp3
 
 ```
                           .--¯¯¯¯--.
