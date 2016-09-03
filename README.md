@@ -16,7 +16,7 @@ chgflags hidden zelda-secret.mp3
 ```
 
 This is the soundBite
-http://quinnkeaveney.com/files/zelda-secret.mp3
+https://www.youtube.com/watch?v=9d3qCPcMgH4
 ```
                           .--¯¯¯¯--.
                       .''          '.
