@@ -5,11 +5,24 @@ Play Zelda's secret door sound when you open a new Terminal window.
 ### Quick install
 
 ```bash
-cd
-curl --http1.1 https://github.com/quitequinn/ZeldaLogin/blob/master/zelda-secret.mp3 --output /zelda-secret.mp3
-echo 'Afplay zelda-secret.mp3' >>~/.zprofile
-chflags hidden zelda-secret.mp3
+# Download the installer script
+curl -o install.sh https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPONAME/main/install.sh
+# Make it executable
+chmod +x install.sh
+# Run the installer
+./install.sh
 ```
+
+### Installation with Homebrew
+
+To install using Homebrew, you first need to tap this repository and then install the formula.
+
+```bash
+brew tap quitequinn/ZeldaLogin
+brew install zelda-login
+```
+
+After installation, follow the instructions provided by Homebrew (or check `brew info zelda-login`) to add the `afplay` command to your shell configuration file (e.g., `~/.zprofile` or `~/.bash_profile`).
 
 ### Do it yourself
 
