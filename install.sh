@@ -110,18 +110,31 @@ main() {
     echo -e "Config file: ${YELLOW}$shell_config${NC}"
     echo
     
-    # Copy audio file to home directory
+    # Download audio file to home directory
+    echo "Downloading zelda-secret.mp3..."
     if [[ "$os_type" == "macos" ]] || [[ "$os_type" == "linux" ]]; then
-        cp zelda-secret.mp3 ~/zelda-secret.mp3
-        echo -e "${GREEN}✓${NC} Copied zelda-secret.mp3 to home directory"
-    elif [[ "$os_type" == "windows" ]]; then
-        # Convert to WAV for Windows compatibility (requires ffmpeg)
-        if command -v ffmpeg &> /dev/null; then
-            ffmpeg -i zelda-secret.mp3 ~/zelda-secret.wav -y > /dev/null 2>&1
-            echo -e "${GREEN}✓${NC} Converted and copied audio file for Windows"
+        if curl -L https://github.com/quitequinn/ZeldaLogin/raw/master/zelda-secret.mp3 -o ~/zelda-secret.mp3 -s; then
+            echo -e "${GREEN}✓${NC} Downloaded zelda-secret.mp3 to home directory"
         else
-            echo -e "${RED}⚠${NC} FFmpeg not found. Please install FFmpeg or manually convert zelda-secret.mp3 to WAV format"
-            cp zelda-secret.mp3 ~/zelda-secret.mp3
+            echo -e "${RED}✗${NC} Failed to download zelda-secret.mp3"
+            echo "Please check your internet connection and try again"
+            exit 1
+        fi
+    elif [[ "$os_type" == "windows" ]]; then
+        # Download MP3 first, then convert to WAV for Windows compatibility
+        if curl -L https://github.com/quitequinn/ZeldaLogin/raw/master/zelda-secret.mp3 -o ~/zelda-secret.mp3 -s; then
+            if command -v ffmpeg &> /dev/null; then
+                ffmpeg -i ~/zelda-secret.mp3 ~/zelda-secret.wav -y > /dev/null 2>&1
+                rm ~/zelda-secret.mp3  # Remove MP3 after conversion
+                echo -e "${GREEN}✓${NC} Downloaded and converted audio file for Windows"
+            else
+                echo -e "${RED}⚠${NC} FFmpeg not found. Please install FFmpeg or manually convert zelda-secret.mp3 to WAV format"
+                echo -e "${GREEN}✓${NC} Downloaded zelda-secret.mp3 (requires manual conversion to WAV)"
+            fi
+        else
+            echo -e "${RED}✗${NC} Failed to download zelda-secret.mp3"
+            echo "Please check your internet connection and try again"
+            exit 1
         fi
     fi
     
