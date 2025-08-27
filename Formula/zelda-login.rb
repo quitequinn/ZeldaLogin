@@ -2,7 +2,7 @@ class ZeldaLogin < Formula
   desc "Play Zelda's secret sound when opening a new terminal window"
   homepage "https://github.com/quitequinn/ZeldaLogin"
   url "https://github.com/quitequinn/ZeldaLogin/archive/v2.1.0.tar.gz"
-  sha256 "SHA256_PLACEHOLDER" # Will be updated when we create the actual release
+  sha256 "bc679cdbcd49dfa4f1e678b175798cbe3cde7f60d605cf823c266603998a70b6"
   license "MIT"
   head "https://github.com/quitequinn/ZeldaLogin.git", branch: "master"
 
