@@ -4,12 +4,28 @@ Play Zelda's secret door sound when you open a new terminal window - now with cr
 
 ## 🚀 Quick Install (Recommended)
 
-### Automatic Installation
+### Package Managers (Easiest)
+
+#### Homebrew (macOS/Linux)
+```bash
+# Coming soon - under development
+brew install zelda-login
+```
+
+#### Scoop (Windows)
+```bash
+# Planned for future release
+scoop install zelda-login
+```
+
+### Direct Installation
+
+#### Automatic Installation
 ```bash
 curl -sSL https://raw.githubusercontent.com/quitequinn/ZeldaLogin/master/install.sh | bash
 ```
 
-### Manual Download and Install
+#### Manual Download and Install
 ```bash
 git clone https://github.com/quitequinn/ZeldaLogin.git
 cd ZeldaLogin

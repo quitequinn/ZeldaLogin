@@ -1,6 +1,8 @@
 #!/bin/bash
 # Zelda Login Installer - Cross-platform audio setup for terminal startup
 
+VERSION="2.1.0"
+
 # Colors for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -8,7 +10,27 @@ YELLOW='\033[1;33m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-echo -e "${BLUE}🗡️  Zelda Login Installer${NC}"
+# Handle command line arguments
+if [[ "$1" == "--version" || "$1" == "-v" ]]; then
+    echo "Zelda Login Installer v$VERSION"
+    exit 0
+fi
+
+if [[ "$1" == "--help" || "$1" == "-h" ]]; then
+    echo "Zelda Login Installer v$VERSION"
+    echo "Play Zelda's secret sound when opening a new terminal window"
+    echo ""
+    echo "Usage: $0 [OPTIONS]"
+    echo ""
+    echo "Options:"
+    echo "  -h, --help      Show this help message"
+    echo "  -v, --version   Show version information"
+    echo ""
+    echo "For more information, visit: https://github.com/quitequinn/ZeldaLogin"
+    exit 0
+fi
+
+echo -e "${BLUE}🗡️  Zelda Login Installer v$VERSION${NC}"
 echo "Setting up Zelda's secret sound for terminal startup..."
 echo
 
