@@ -6,7 +6,7 @@ Play Zelda's secret door sound when you open a new terminal window - now with cr
 
 ### Package Managers (Easiest)
 
-#### Homebrew (macOS/Linux)
+#### Homebrew (macOS/Linux) ✅ **LIVE NOW!**
 ```bash
 # Add the tap and install
 brew tap quitequinn/zelda-login
