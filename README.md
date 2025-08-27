@@ -8,14 +8,18 @@ Play Zelda's secret door sound when you open a new terminal window - now with cr
 
 #### Homebrew (macOS/Linux)
 ```bash
-# Coming soon - under development
+# Add the tap and install
+brew tap quitequinn/zelda-login
 brew install zelda-login
+
+# Configure your terminal  
+zelda-login-install
 ```
 
 #### Scoop (Windows)
 ```bash
-# Planned for future release
-scoop install zelda-login
+# Submit to scoop-main pending - use direct install for now
+# Future: scoop install zelda-login
 ```
 
 ### Direct Installation

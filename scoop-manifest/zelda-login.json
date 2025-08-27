@@ -1,0 +1,37 @@
+{
+    "version": "2.1.0",
+    "description": "Play Zelda's secret sound when opening a new terminal window",
+    "homepage": "https://github.com/quitequinn/ZeldaLogin",
+    "license": "MIT",
+    "url": "https://github.com/quitequinn/ZeldaLogin/archive/v2.1.0.zip",
+    "hash": "6ee90291014e937bf2b221307c4f13b9477db737a7352cbe6fa3e3cde97d8c72",
+    "extract_dir": "ZeldaLogin-2.1.0",
+    "bin": [
+        ["install.sh", "zelda-login-install"]
+    ],
+    "shortcuts": [
+        ["install.sh", "Zelda Login Setup"]
+    ],
+    "pre_install": [
+        "Write-Host 'Installing Zelda Login...' -ForegroundColor Green",
+        "Write-Host 'After installation, run: zelda-login-install' -ForegroundColor Yellow"
+    ],
+    "post_install": [
+        "Write-Host '🗡️ Zelda Login installed successfully!' -ForegroundColor Green",
+        "Write-Host 'Run: zelda-login-install to configure your terminal' -ForegroundColor Cyan",
+        "Write-Host 'For manual setup, see: https://github.com/quitequinn/ZeldaLogin' -ForegroundColor Gray"
+    ],
+    "uninstaller": {
+        "script": [
+            "Write-Host 'Remember to remove Zelda Login from your shell config files!' -ForegroundColor Yellow",
+            "Write-Host 'Edit ~/.bash_profile or ~/.zshrc and remove the zelda-secret line' -ForegroundColor Gray"
+        ]
+    },
+    "checkver": {
+        "github": "https://github.com/quitequinn/ZeldaLogin"
+    },
+    "autoupdate": {
+        "url": "https://github.com/quitequinn/ZeldaLogin/archive/v$version.zip",
+        "extract_dir": "ZeldaLogin-$version"
+    }
+}
