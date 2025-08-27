@@ -1,0 +1,11 @@
+# Example config.fish configuration for Zelda Login
+# Add this line to your ~/.config/fish/config.fish
+
+# Zelda Login - Play secret sound on terminal startup (non-blocking)
+# For macOS
+afplay ~/zelda-secret.mp3 > /dev/null 2>&1 &
+
+# For Linux (uncomment the appropriate line based on your system)
+# paplay ~/zelda-secret.mp3 > /dev/null 2>&1 &
+# aplay ~/zelda-secret.mp3 > /dev/null 2>&1 &
+# play ~/zelda-secret.mp3 > /dev/null 2>&1 &

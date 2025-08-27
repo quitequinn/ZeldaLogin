@@ -1,0 +1,5 @@
+# Example .bash_profile configuration for Zelda Login
+# Add this line to your ~/.bash_profile or ~/.bashrc
+
+# Zelda Login - Play secret sound on terminal startup (non-blocking)
+afplay ~/zelda-secret.mp3 > /dev/null 2>&1 &
